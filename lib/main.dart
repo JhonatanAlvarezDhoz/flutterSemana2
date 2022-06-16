@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutterapp/views/list_view.dart';
+//import 'package:flutterapp/views/list_view.dart';
+import 'package:flutterapp/views/list_view_database.dart';
 
 //void main() => runApp(MyApp());
 void main() async {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: ListView2(),
+      home: CallFirebase(),
     );
   }
 }
