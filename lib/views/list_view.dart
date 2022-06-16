@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterapp/domain/firebase_conecction.dart';
 
 class ListView2 extends StatelessWidget {
   ListView2({Key? key}) : super(key: key);
@@ -77,6 +78,7 @@ class ListView2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var db = FirebaseConnection().getRegister();
     return Scaffold(
         appBar: AppBar(
           title: const Text('Video Game List'),

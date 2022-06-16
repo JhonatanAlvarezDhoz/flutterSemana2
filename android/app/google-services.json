@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "780243273094",
+    "firebase_url": "https://testflutter-5de21-default-rtdb.firebaseio.com",
+    "project_id": "testflutter-5de21",
+    "storage_bucket": "testflutter-5de21.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780243273094:android:b479e5959050c94d38d807",
+        "android_client_info": {
+          "package_name": "com.example.flutterapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "780243273094-21sjb99j4lcic9e2f8ripk13cp0b5ptu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATmARkqZwXHpczvl_uqElXCNpYxR2evbg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "780243273094-21sjb99j4lcic9e2f8ripk13cp0b5ptu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "780243273094-6dggs6pslov92of7524tnt44re00av6m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.listas"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780243273094:android:4de413530e4fc7cc38d807",
+        "android_client_info": {
+          "package_name": "com.example.listas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "780243273094-21sjb99j4lcic9e2f8ripk13cp0b5ptu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATmARkqZwXHpczvl_uqElXCNpYxR2evbg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "780243273094-21sjb99j4lcic9e2f8ripk13cp0b5ptu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "780243273094-6dggs6pslov92of7524tnt44re00av6m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.listas"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
