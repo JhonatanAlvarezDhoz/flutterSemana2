@@ -44,7 +44,7 @@ class _CallFirebaseState extends State<CallFirebase> {
     callDatabase();
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Zetien's Car Wash Client List"),
+        title: const Text("Car Wash"),
         centerTitle: true,
       ),
       body: Center(
