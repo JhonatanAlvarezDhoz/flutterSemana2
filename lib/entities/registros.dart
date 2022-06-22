@@ -20,7 +20,7 @@ class Registro {
       this.licencia});
 
   factory Registro.fromJson(Map<String, dynamic> json) {
-    print(json);
+    //print(json);
     return Registro(
       carro: json['Carro'] != null ? Carro.fromJson(json['Carro']) : null,
       servicio:

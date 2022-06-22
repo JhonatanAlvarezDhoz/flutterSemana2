@@ -37,7 +37,7 @@ class Home extends State<Splash> {
                 child: Lottie.asset('assets/animations/charguin.json')),
             const SizedBox(height: 20),
             const Text(
-              "CarWash",
+              "Car Wash",
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
           ],

@@ -10,13 +10,15 @@ class ListViewServices extends StatelessWidget {
       "Description": "lavado sencillo",
     },
     {
-      'image': 'https://i.ytimg.com/vi/K13S9X8p0QY/maxresdefault.jpg',
-      "services": ' Lavado',
+      'image':
+          'https://st1.uvnimg.com/0d/18/9ca11a744a8395d9f5df18ec0c97/shutterstock-440455858.jpg',
+      "services": ' Pulido',
       "Description": "lavado sencillo",
     },
     {
-      'image': 'https://i.ytimg.com/vi/K13S9X8p0QY/maxresdefault.jpg',
-      "services": ' Lavado',
+      'image':
+          'https://tapiceriacarrosmedellin.com/wp-content/uploads/2020/08/seat-cushion-1099624_640.jpg',
+      "services": ' Tapizado',
       "Description": "lavado sencillo",
     },
   ];
@@ -42,7 +44,7 @@ class ListViewServices extends StatelessWidget {
                             onPressed: () => Navigator.pop(context, 'Cancelar'),
                             child: const Text('Cancelar')),
                         TextButton(
-                            onPressed: () => Navigator.pop(context, 'Recervar'),
+                            onPressed: () => Navigator.pop(context, 'Reservar'),
                             child: const Text('Recervar')),
                       ],
                     )),

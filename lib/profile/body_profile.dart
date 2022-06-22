@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutterapp/utils/item_info.dart';
+import 'package:flutterapp/utils/vertical_space.dart';
 
 class BodyProfile extends StatelessWidget {
   const BodyProfile({Key? key}) : super(key: key);
@@ -12,6 +14,7 @@ class BodyProfile extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
+          const VerticalSpace(size: 15),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const <Widget>[
@@ -28,68 +31,14 @@ class BodyProfile extends StatelessWidget {
               ),
             ],
           ),
-          const ItemInfo(
-            texto: 'Hola',
-            icon: Icons.ac_unit_sharp,
-          ),
-          Row(
-            children: const <Widget>[
-              Icon(
-                Icons.location_on,
-                color: Colors.white,
-              ),
-              Text(
-                'Londres',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ],
-          ),
-          Row(
-            children: const <Widget>[
-              Icon(
-                Icons.heart_broken_sharp,
-                color: Colors.white,
-              ),
-              Text(
-                'Soltero',
-                style: TextStyle(
-                  color: Colors.white,
-                ),
-              ),
-            ],
-          ),
+          const VerticalSpace(size: 15),
+          const ItemInfo(texto: 'De:  Londres.', icon: Icons.home_filled),
+          const VerticalSpace(size: 15),
+          const ItemInfo(texto: 'Vive:  Londres.', icon: Icons.location_on),
+          const VerticalSpace(size: 15),
+          const ItemInfo(texto: 'Soltero', icon: Icons.heart_broken_sharp),
         ],
       ),
-    );
-  }
-}
-
-class ItemInfo extends StatelessWidget {
-  final String texto;
-  final IconData icon;
-  const ItemInfo({
-    required this.texto,
-    required this.icon,
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        Icon(
-          icon,
-          color: Colors.white,
-        ),
-        Text(
-          texto,
-          style: const TextStyle(
-            color: Colors.white,
-          ),
-        ),
-      ],
     );
   }
 }
