@@ -78,7 +78,7 @@ class ListView2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var db = FirebaseConnection().getRegister();
+    FirebaseConnection().getRegister();
     return Scaffold(
         appBar: AppBar(
           title: const Text('Video Game List'),

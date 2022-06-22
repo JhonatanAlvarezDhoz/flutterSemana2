@@ -11,8 +11,8 @@ class CallFirebase extends StatefulWidget {
 
 void openAlertDialog(BuildContext context, Registro registros) {
   AlertDialog alert = AlertDialog(
-      title: Text(registros.name! + ' ' + registros.apellido!),
-      content: Container(
+      title: Text('${registros.name!} ${registros.apellido!}'),
+      content: SizedBox(
         height: 280,
         child: Column(
           //fit: StackFit.expand,
@@ -21,9 +21,7 @@ void openAlertDialog(BuildContext context, Registro registros) {
               image: NetworkImage(registros.image!),
               fit: BoxFit.cover,
             ),
-            Text(registros.carro.toString() +
-                '\n\n' +
-                registros.servicio.toString()),
+            Text('${registros.carro}\n\n${registros.servicio}'),
           ],
         ),
       ),
@@ -57,26 +55,53 @@ class _CallFirebaseState extends State<CallFirebase> {
     return ListView.builder(
       itemCount: registros.length,
       itemBuilder: (BuildContext context, int index) {
-        return ListTile(
-          leading: CircleAvatar(
-            backgroundImage: NetworkImage(registros[index].image!),
-          ),
-          title:
-              Text(registros[index].name! + ' ' + registros[index].apellido!),
-          onTap: () {
-            openAlertDialog(context, registros[index]);
-          },
-        );
+        return CustomCard(list: registros, index: index);
       },
     );
   }
 
   void callDatabase() async {
     final respuestas = await firebaseConnection.getRegister();
-    if (registros.length == 0) {
+    if (registros.isEmpty) {
       setState(() {
         registros = respuestas.registros!;
       });
     }
+  }
+}
+
+class CustomCard extends StatelessWidget {
+  final List list;
+  final int index;
+  const CustomCard({required this.list, required this.index, Key? key})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    var lista = list[index];
+    return Center(
+      child: Card(
+        //elevation: 2,
+
+        color: Theme.of(context).colorScheme.surfaceVariant,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        margin: const EdgeInsets.all(15),
+        elevation: 10,
+
+        child: SizedBox(
+          width: 370,
+          height: 120,
+          child: ListTile(
+            leading: CircleAvatar(
+              backgroundImage: NetworkImage(lista.image!),
+            ),
+            title: Text('${lista.name!} ${lista.apellido!}'),
+            onTap: () {
+              openAlertDialog(context, lista);
+            },
+          ),
+        ),
+      ),
+    );
   }
 }

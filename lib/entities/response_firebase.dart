@@ -16,7 +16,6 @@ class ResponseFirebase {
   Cambiamos a list debido a que de esa forma estamos recibiendo, lo que enviamos eso debemos esperar */
 
   ResponseFirebase.fromJson(List<dynamic> json) {
-    print(json);
     registros = json.map((e) => Registro.fromJson(e)).toList();
   }
 }
