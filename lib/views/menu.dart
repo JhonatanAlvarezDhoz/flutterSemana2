@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutterapp/home/homr.dart';
+import 'package:flutterapp/profile/profile.dart';
 import 'package:flutterapp/views/list_view_database.dart';
-import 'package:flutterapp/views/profile.dart';
 
 class Menu extends StatefulWidget {
   const Menu({Key? key}) : super(key: key);
@@ -16,10 +17,7 @@ class _MenuS extends State<Menu> {
       TextStyle(fontSize: 24, fontWeight: FontWeight.bold);
 
   static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
+    Home(),
     CallFirebase(),
     Profile(),
   ];
